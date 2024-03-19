@@ -11,6 +11,72 @@
     />
   </head>
   <body>
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">HeroesFinder</a>
+      </div>
+    </nav>
+    <main>
+      <div id="hero-banner" class="container">
+        <h1 class="display-1 text-center fw-bold my-5">Heroes Finder</h1>
+        <h2 class="text-center">Encuentra a tu superhéroe favorito!</h2>
+      </div>
+      <section id="search-bar">
+        <div class="container">
+          <p class="text-center">Ingresa el número del superéroe a buscar</p>
+          <form class="input-group p-4" id="form-busqueda">
+            <span class="input-group-text">Ingresa un N°:</span>
+            <input
+              type="text"
+              class="input-busqueda form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              placeholder="Ej. 001"
+              maxlength="3"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="boton-busqueda"
+              value="buscar"
+            >
+              Buscar
+            </button>
+          </form>
+        </div>
+      </section>
+      <div class="prueba"></div>
+      <section class="container" id="heroes-info">
+        <div class="card mb-3" style="">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="" class="img-fluid rounded-start" id="heroes-img" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Nombre superhéroe</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Libero saepe, corporis cumque quam iure quibusdam aspernatur
+                  quod! Harum exercitationem qui praesentium cum similique nisi
+                  accusantium eum, autem, in nemo facere.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="heroes-stats">
+        <div class="card">
+          <img src="assets/img/Pie-chart.jpg" class="card-img" />
+          <div class="card-img-overlay">
+            <h5 class="card-title">Estadísticas de poder</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
