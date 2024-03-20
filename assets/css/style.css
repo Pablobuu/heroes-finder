@@ -1,11 +1,67 @@
+:root {
+  --rojo: #dc3545;
+  --amarillo: #ffc107;
+}
+
 * {
   font-family: "Bangers", system-ui;
   font-weight: 400;
   font-style: light;
 }
-main {
-  background-color: lightgray;
-}
+
 li {
-  list-style-type: " 🗨  ";
+  list-style: none;
+}
+
+li::before {
+  content: " 🗨  ";
+  padding-right: 10px;
+  color: var(--amarillo);
+}
+
+body {
+  background: linear-gradient(to bottom, #fffefe, #acabab);
+}
+main {
+  background-image: radial-gradient(circle, #ffffff 25%, transparent 25%),
+    radial-gradient(circle, #ffffff 25%, transparent 25%);
+  background-position: 0 0, 50px 50px;
+  background-size: 10px 10px;
+}
+
+#noinfo {
+  color: var(--rojo);
+  position: relative;
+  top: 35%;
+  left: 15%;
+}
+
+#span-numero {
+  background-color: var(--amarillo);
+}
+
+#span-texto {
+  letter-spacing: 5px;
+  color: var(--rojo);
+  text-shadow: 5px 5px 0 #222222;
+}
+
+#span-heroes {
+  letter-spacing: 3px;
+  color: var(--amarillo);
+  text-shadow: 5px 5px 0 #222222;
+}
+
+a:visited {
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }

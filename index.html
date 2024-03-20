@@ -13,6 +13,10 @@
       type="text/javascript"
       src="https://cdn.canvasjs.com/canvasjs.min.js"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/43867e65a1.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,24 +35,30 @@
     <main>
       <!-- hero -->
       <div id="hero-banner" class="container">
-        <h1 class="display-1 text-center fw-bold py-3">Heroes Finder</h1>
+        <h1 class="display-1 text-center fw-bold py-3">
+          <span id="span-heroes">Heroes</span>
+          <span id="span-texto" class="fw-bold">Finder</span>
+        </h1>
         <h2 class="text-center">Encuentra a tu superhéroe favorito!</h2>
       </div>
       <section id="search-bar">
         <div class="container">
-          <p class="text-center">Ingresa el número del superéroe a buscar</p>
           <form class="input-group p-4" id="form-busqueda">
-            <span class="input-group-text">Ingresa un N°:</span>
+            <span
+              id="span-numero"
+              class="input-group-text border border-3 border-secondary"
+              >Ingresa un N°:</span
+            >
             <input
               type="text"
-              class="input-busqueda form-control"
+              class="input-busqueda form-control border border-3 border-secondary"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
               placeholder="Ej. 001"
               maxlength="3"
             />
             <button
-              class="btn btn-outline-secondary"
+              class="btn btn-danger border border-3 border-secondary"
               type="button"
               id="boton-busqueda"
               value="buscar"
@@ -59,31 +69,40 @@
         </div>
       </section>
       <!-- hero -->
-
       <!-- card -->
-      <section class="container">
+      <section id="card-section" class="container" style="display: none">
         <div class="row">
           <div class="col-md-6">
-            <div class="card mb-3">
+            <div
+              class="card card border border-3 border-secondary mb-3"
+              style="min-height: 344px"
+            >
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="" class="img-fluid rounded" id="heroes-img" />
+                  <img src="" class="img-fluid" id="heroes-img" />
                 </div>
                 <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title" id="nombre"></h5>
-                    <h6 id="aliases"></h6>
+                  <div class="card-body p-4">
+                    <h5
+                      class="card-title display-5 text-center"
+                      id="nombre"
+                    ></h5>
+                    <h6 class="text-center mb-3" id="aliases"></h6>
                     <ul id="info-list"></ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- card -->
           <div class="col-md-6">
-            <div class="card mb-3">
+            <div
+              class="card card border border-3 border-secondary mb-3"
+              style="min-height: 22vw"
+            >
               <div class="card-body">
-                <h5 class="card-title" id="stats"></h5>
-                <h2 id="noinfo" class="text-center align-middle"></h2>
+                <h5 class="card-title text-center" id="stats"></h5>
+                <h2 id="noinfo"></h2>
                 <div
                   id="chartContainer"
                   style="height: 300px; width: 100%"
@@ -93,16 +112,33 @@
           </div>
         </div>
       </section>
+      <!-- card -->
     </main>
-    <!-- card -->
 
     <!-- footer -->
-    <footer
-      class="navbar bg-dark border-bottom border-body text-white"
-      data-bs-theme="dark"
-    >
-      <div class="container text-center">
-        <p>HeroesFinder</p>
+    <footer class="bg-dark text-light" data-bs-theme="dark">
+      <div class="container p-3">
+        <div class="d-flex justify-content-around align-items-center">
+          <h3 class="fw-light">HeroesFinder</h3>
+          <div class="fa-2x">
+            <a href="https://github.com/Pablobuu"
+              ><i
+                class="fa-brands fa-square-github"
+                data-bs-toggle="tooltip"
+                data-bs-placement="left"
+                data-bs-title="Github"
+              ></i
+            ></a>
+            <a href="https://www.linkedin.com/in/pabloburgoscavada/"
+              ><i
+                class="fa-brands fa-linkedin"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="LinkedIn"
+              ></i
+            ></a>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- footer -->
