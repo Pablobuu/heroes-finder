@@ -9,14 +9,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.canvasjs.com/canvasjs.min.js"
+    ></script>
   </head>
   <body>
-    <nav class="navbar bg-light">
+    <!-- nav -->
+    <nav class="navbar bg-light sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">HeroesFinder</a>
+        <a class="navbar-brand px-5" href="#">HeroesFinder</a>
       </div>
     </nav>
+    <!-- nav -->
     <main>
+      <!-- hero -->
       <div id="hero-banner" class="container">
         <h1 class="display-1 text-center fw-bold my-5">Heroes Finder</h1>
         <h2 class="text-center">Encuentra a tu superhéroe favorito!</h2>
@@ -45,36 +52,39 @@
           </form>
         </div>
       </section>
-      <div class="prueba"></div>
-      <section class="container" id="heroes-info">
-        <div class="card mb-3" style="">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="" class="img-fluid rounded-start" id="heroes-img" />
+      <!-- hero -->
+      <section class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="" class="img-fluid rounded" id="heroes-img" />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title" id="nombre"></h5>
+                    <h6 id="aliases"></h6>
+                    <ul id="info-list"></ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-8">
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
               <div class="card-body">
-                <h5 class="card-title">Nombre superhéroe</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Libero saepe, corporis cumque quam iure quibusdam aspernatur
-                  quod! Harum exercitationem qui praesentium cum similique nisi
-                  accusantium eum, autem, in nemo facere.
-                </p>
+                <h5 class="card-title" id="stats"></h5>
+                <div
+                  id="chartContainer"
+                  style="height: 300px; width: 100%"
+                ></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="container" id="heroes-stats">
-        <div class="card">
-          <img src="assets/img/Pie-chart.jpg" class="card-img" />
-          <div class="card-img-overlay">
-            <h5 class="card-title">Estadísticas de poder</h5>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </section>
+      <!-- card -->
     </main>
     <footer></footer>
     <script
@@ -82,6 +92,7 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
