@@ -72,16 +72,28 @@ $(document).ready(function () {
       dataType: "json",
       success: function (datosApi) {
         muestraInfo(datosApi);
-        dataPoints.push(
-          { y: datosApi.powerstats.intelligence, indexLabel: "Intelligence" },
-          { y: datosApi.powerstats.strength, indexLabel: "Strength" },
-          { y: datosApi.powerstats.speed, indexLabel: "Speed" },
-          { y: datosApi.powerstats.durability, indexLabel: "Durability" },
-          { y: datosApi.powerstats.power, indexLabel: "Power" },
-          { y: datosApi.powerstats.combat, indexLabel: "Combat" }
-        );
-        options.data[0].dataPoints = dataPoints;
-        chart.render();
+        if (datosApi.powerstats.speed != "null") {
+          dataPoints.push(
+            { y: datosApi.powerstats.intelligence, indexLabel: "Intelligence" },
+            { y: datosApi.powerstats.strength, indexLabel: "Strength" },
+            { y: datosApi.powerstats.speed, indexLabel: "Speed" },
+            { y: datosApi.powerstats.durability, indexLabel: "Durability" },
+            { y: datosApi.powerstats.power, indexLabel: "Power" },
+            { y: datosApi.powerstats.combat, indexLabel: "Combat" }
+          );
+          options.data[0].dataPoints = dataPoints;
+          if (chart) {
+            chart.destroy();
+          }
+          chart = new CanvasJS.Chart("chartContainer", options);
+          chart.render();
+          $("#noinfo").remove();
+        } else {
+          $("#chartContainer").html(
+            "<h2 class=text-center id=noinfo>SIN INFORMACIÓN</h2>"
+          );
+          $("#stats").html("");
+        }
       },
       error: function (error) {
         alert("Error al buscar los datos");

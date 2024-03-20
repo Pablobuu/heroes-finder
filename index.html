@@ -13,19 +13,25 @@
       type="text/javascript"
       src="https://cdn.canvasjs.com/canvasjs.min.js"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- nav -->
-    <nav class="navbar bg-light sticky-top">
+    <nav class="navbar sticky-top bg-dark border-bottom border-body">
       <div class="container-fluid">
-        <a class="navbar-brand px-5" href="#">HeroesFinder</a>
+        <a class="navbar-brand px-5 text-white" href="#">HeroesFinder</a>
       </div>
     </nav>
     <!-- nav -->
     <main>
       <!-- hero -->
       <div id="hero-banner" class="container">
-        <h1 class="display-1 text-center fw-bold my-5">Heroes Finder</h1>
+        <h1 class="display-1 text-center fw-bold py-3">Heroes Finder</h1>
         <h2 class="text-center">Encuentra a tu superhéroe favorito!</h2>
       </div>
       <section id="search-bar">
@@ -53,6 +59,8 @@
         </div>
       </section>
       <!-- hero -->
+
+      <!-- card -->
       <section class="container">
         <div class="row">
           <div class="col-md-6">
@@ -75,6 +83,7 @@
             <div class="card mb-3">
               <div class="card-body">
                 <h5 class="card-title" id="stats"></h5>
+                <h2 id="noinfo" class="text-center align-middle"></h2>
                 <div
                   id="chartContainer"
                   style="height: 300px; width: 100%"
@@ -84,9 +93,19 @@
           </div>
         </div>
       </section>
-      <!-- card -->
     </main>
-    <footer></footer>
+    <!-- card -->
+
+    <!-- footer -->
+    <footer
+      class="navbar bg-dark border-bottom border-body text-white"
+      data-bs-theme="dark"
+    >
+      <div class="container text-center">
+        <p>HeroesFinder</p>
+      </div>
+    </footer>
+    <!-- footer -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
